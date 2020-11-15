@@ -50,14 +50,18 @@ long ejercicio3RecursivoNoFinal(long *a, int *n) {
 	else if (n1 % 2 == 1) {
 
 		n1 /= 2;
-		r = (long) (pow(ejercicio3RecursivoNoFinal(&a1, &n1), 2) * a1);
+		r = ejercicio3RecursivoNoFinal(&a1, &n1);
+		r = r*r*a1;
+		//r = (long) (pow(ejercicio3RecursivoNoFinal(&a1, &n1), 2) * a1);
 
 		//r = (long) (Math.pow(ejercicio3RecursivoNoFinal(a1, n1 / 2), 2) * a1);
 
 	} else {
 
 		n1 /= 2;
-		r = (long) (pow(ejercicio3RecursivoNoFinal(&a1, &n1), 2));
+		r = ejercicio3RecursivoNoFinal(&a1, &n1);
+		r = r*r;
+		//r = (long) (pow(ejercicio3RecursivoNoFinal(&a1, &n1), 2));
 		//r = (long) (Math.pow(ejercicio3RecursivoNoFinal(a1, n1 / 2), 2));
 
 	}
